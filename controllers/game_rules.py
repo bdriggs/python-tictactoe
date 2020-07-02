@@ -30,6 +30,15 @@ class Game_Rules:
         elif board[2] == "X" and board[4] == "X" and board[8] == "X":
             self.game_over = True
             return self.game_over
+        elif board[0] == "X" and board[3] == "X" and board[6] == "X":
+            self.game_over = True
+            return self.game_over
+        elif board[1] == "X" and board[4] == "X" and board[7] == "X":
+            self.game_over = True
+            return self.game_over
+        elif board[2] == "X" and board[5] == "X" and board[8] == "X":
+            self.game_over = True
+            return self.game_over
         elif board[0] == "O" and board[1] == "O" and board[2] == "O":
             self.game_over = True
             return self.game_over
@@ -43,6 +52,15 @@ class Game_Rules:
             self.game_over = True
             return self.game_over
         elif board[2] == "O" and board[4] == "O" and board[8] == "O":
+            self.game_over = True
+            return self.game_over
+        elif board[0] == "O" and board[3] == "O" and board[6] == "O":
+            self.game_over = True
+            return self.game_over
+        elif board[1] == "O" and board[4] == "O" and board[7] == "O":
+            self.game_over = True
+            return self.game_over
+        elif board[2] == "O" and board[5] == "O" and board[8] == "O":
             self.game_over = True
             return self.game_over
         else: return self.game_over
