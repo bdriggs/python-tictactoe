@@ -15,7 +15,7 @@ class Game:
 
         game_over = False
         while game_over != True:
-            print("Pick a spot from 1-8")
+            print("Pick a spot from 0-8")
             player_choice = input()
 
             board.the_board[int(player_choice)] = player_letter
