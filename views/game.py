@@ -13,8 +13,16 @@ class Game:
 
         game_over = False
         while game_over != True:
-            print("Pick a spot from 0-8")
-            player_choice = input()
+            valid_input = False
+
+            while valid_input != True:
+                print("Pick a spot from 0-8")
+                player_choice = int(input())
+
+                if player_choice >= 0 and player_choice < 9:
+                    valid_input = True
+                else:
+                    print("Not a valid input!")
 
             board.the_board[int(player_choice)] = player_letter
 
