@@ -7,27 +7,30 @@ class Game:
     def __init__(self):
         print("Let's play a game of tic tac toe!")
 
-        board = Board()
-        game_rules = Game_Rules()
-        player_letter = "X"
+        self.board = Board()
+        self.game_rules = Game_Rules()
+        self.player_letter = "X"
+        self.game_over = False
 
-        game_over = False
-        while game_over != True:
-            valid_input = False
+        while self.game_over != True:
+            self.valid_input = False
 
-            while valid_input != True:
-                print("Pick a spot from 0-8")
-                player_choice = int(input())
+            while self.valid_input != True:
+                print(
+                    f'Pick a spot from 0-8. Player letter: {self.player_letter}')
+                self.player_choice = int(input())
 
-                if player_choice >= 0 and player_choice < 9:
-                    valid_input = True
+                if self.player_choice >= 0 and self.player_choice < 9:
+                    self.valid_input = True
                 else:
-                    print("Not a valid input!")
+                    print("Number not between 0 and 8!")
 
-            board.the_board[int(player_choice)] = player_letter
+            self.board.the_board[int(self.player_choice)] = self.player_letter
 
-            player_letter = game_rules.switch_player(player_letter)
+            self.player_letter = self.game_rules.switch_player(
+                self.player_letter)
 
-            game_over = game_rules.check_for_win(board.the_board)
+            self.game_over = self.game_rules.check_for_win(
+                self.board.the_board)
 
         print("Game Over!")
