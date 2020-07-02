@@ -1,5 +1,3 @@
-import os
-os.sys.path.append("/home/briggs/Documents/repos/python-tictactoe")
 from models.board import Board
 from controllers.game_rules import Game_Rules
 
@@ -23,7 +21,5 @@ class Game:
             player_letter = game_rules.switch_player(player_letter)
 
             game_over = game_rules.check_for_win(board.the_board)
-        
-        print("Game Over!")
 
-Game()
+        print("Game Over!")

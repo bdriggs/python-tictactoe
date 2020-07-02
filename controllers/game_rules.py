@@ -1,6 +1,5 @@
-import os
-os.sys.path.append("/home/briggs/Documents/repos/python-tictactoe")
 from models.board import Board
+
 
 class Game_Rules:
     def __init__(self):
@@ -63,7 +62,5 @@ class Game_Rules:
         elif board[2] == "O" and board[5] == "O" and board[8] == "O":
             self.game_over = True
             return self.game_over
-        else: return self.game_over
-        
-        
-    
+        else:
+            return self.game_over
